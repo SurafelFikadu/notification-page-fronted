@@ -1,0 +1,183 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+body {
+    background-color: var(--Very-light-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+main {
+    background-color: var(--White);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+    max-width: 680px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header h2 {
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+}
+
+header span {
+    background-color: var(--Blue);
+    color: var(--White);
+    padding: 2px 10px;
+    font-size: medium;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+header p {
+    color: var(--Blue);
+    font-weight: 500;
+}
+
+.img-text {
+    display: flex;
+    gap: 10px;
+    margin: 7px 0;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.img-text.first-3 {
+    background-color: var(--Very-light-grayish-blue);
+
+}
+
+.img-text p {
+    color: var(--Grayish-blue);
+}
+
+.img-text p .name {
+    color: var(--Very-dark-blue);
+    font-weight: 700;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+.img-text .name-para {
+    margin-top: 7px;
+}
+
+.p-red .my-first {
+    color: var(--Dark-grayish-blue);
+}
+
+.p-red .chess {
+    color: var(--Blue);
+    font-weight: 700;
+}
+
+.p-red {
+    position: relative;
+}
+
+.red-circle {
+    position: absolute;
+    background-color: var(--Red);
+    color: var(--Red);
+    border-radius: 50%;
+    font-size: 7px;
+    padding: 0 2px;
+    margin-left: 5px;
+    margin-top: 7px;
+}
+
+.private-msg {
+    padding: 20px;
+    border: 1px solid var(--Light-grayish-blue-2);
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+.name-para.kimberly {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* align-items: center; */
+}
+
+/* .name-para {
+    width: 100%;
+} */
+
+.name-para.nathan span {
+    color: var(--Blue);
+    font-weight: 500;
+}
+
+.img-text.rest .name-para {
+    margin: 5px;
+    line-height: 21px;
+}
+
+
+/* ---------- :active state ----------- */
+.p-red .name:hover,
+.p-red .my-first:hover,
+.p-red .chess:hover {
+    cursor: pointer;
+    color: var(--Blue);
+}
+
+.private-msg:hover {
+    cursor: pointer;
+    background-color: var(--Light-grayish-blue-1);
+}
+
+.self-img {
+    cursor: pointer;
+}
+
+
+@media(max-width: 600px) {
+    main {
+        width: 375px;
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    header h2 {
+        font-size: 23px;
+    }
+
+    header span {
+        margin-left: 5px;
+    }
+
+    .img-text {
+        font-size: 14px;
+    }
+}
